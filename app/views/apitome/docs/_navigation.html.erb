@@ -2,9 +2,9 @@
   <% if Apitome.configuration.readme %>
     <li>
       <% if Apitome.configuration.single_page %>
-        <a href="#readme"><%= t(:readme) %></a>
+        <a href="#readme"><%= t('apitome.readme') %></a>
       <% else %>
-        <a href="<%= Apitome.configuration.mount_at %>"><%= t(:readme) %></a>
+        <a href="<%= Apitome.configuration.mount_at %>"><%= t('apitome.readme') %></a>
       <% end %>
     </li>
   <% end %>
