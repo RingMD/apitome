@@ -1,10 +1,10 @@
 <section class="params">
-  <h3><%= t('apitome.parameters') %></h3>
+  <h3><%= t(:parameters, scope: :apitome) %></h3>
   <div class="table-responsive">
     <table class="table table-bordered">
       <tr>
         <% param_headers(params).each do |title| %>
-          <th><%= title %></th>
+          <th><%= title.titlecase %></th>
         <% end %>
       </tr>
       <% params.each do |param| %>
@@ -16,7 +16,7 @@
               <%= param['name'] %>
             <% end %>
             <% if param['required'] %>
-              <span class="label label-danger required"><%= t('apitome.required') %></span>
+              <span class="label label-danger required"><%= t(:required, scope: :apitome) %></span>
             <% end %>
           </td>
           <td class="description"><%= param['description'] %></td>
